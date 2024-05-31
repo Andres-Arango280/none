@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Buscar Usuario</title>
+</head>
+<body>
+    <h1>Buscar Usuario</h1>
+    <form action="{{ url_for('search_user') }}" method="post">
+        <label for="search_by">Buscar por:</label>
+        <select id="search_by" name="search_by" required>
+            <option value="idnumber">ID Number</option>
+            <option value="name">Name and Surname</option>
+        </select>
+        <br>
+
+        <div id="idnumber_section">
+            <label for="idnumber">ID Number:</label>
+            <input type="text" id="idnumber" name="idnumber">
+        </div>
+
+        <div id="name_section">
+            <label for="firstname">First Name:</label>
+            <input type="text" id="firstname" name="firstname">
+            <br>
+            <label for="surname">Surname:</label>
+            <input type="text" id="surname" name="surname">
+        </div>
+
+        <br>
+        <button type="submit">Buscar</button>
+    </form>
+
+    <script>
+        document.getElementById('search_by').addEventListener('change', function () {
+            var searchBy = this.value;
+            document.getElementById('idnumber_section').style.display = (searchBy == 'idnumber') ? 'block' : 'none';
+            document.getElementById('name_section').style.display = (searchBy == 'name') ? 'block' : 'none';
+        });
+        document.getElementById('search_by').dispatchEvent(new Event('change'));
+    </script>
+</body>
+</html>

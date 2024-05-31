@@ -1,0 +1,64 @@
+<!-- templates/form.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Employee Form</title>
+</head>
+<body>
+    <h1>Employee Form</h1>
+    <form action="{{ url_for('process_form') }}" method="post">
+        <!-- Campos del formulario -->
+        <label for="firstname">First Name:</label>
+        <input type="text" id="firstname" name="firstname" required><br>
+
+        <label for="surname">Surname:</label>
+        <input type="text" id="surname" name="surname" required><br>
+
+        <label for="idnumber">ID Number:</label>
+        <input type="text" id="idnumber" name="idnumber" required><br>
+
+        <label for="mail">Email:</label>
+        <input type="email" id="mail" name="mail" required><br>
+
+        <h2>Accruals Information</h2>
+        <label for="basicsalary">Basic Salary:</label>
+        <input type="number" id="basicsalary" name="basicsalary" step="0.01" required><br>
+
+        <label for="workeddays">Worked Days:</label>
+        <input type="number" id="workeddays" name="workeddays" required><br>
+
+        <label for="holidaytimeworked">Holiday Time Worked:</label>
+        <input type="number" id="holidaytimeworked" name="holidaytimeworked" required><br>
+
+        <label for="extradaylighthoursworked">Extra Daylight Hours Worked:</label>
+        <input type="number" id="extradaylighthoursworked" name="extradaylighthoursworked" required><br>
+
+        <label for="extranighthoursworked">Extra Night Hours Worked:</label>
+        <input type="number" id="extranighthoursworked" name="extranighthoursworked" required><br>
+
+        <label for="holidayextradaylighthoursworked">Holiday Extra Daylight Hours Worked:</label>
+        <input type="number" id="holidayextradaylighthoursworked" name="holidayextradaylighthoursworked" required><br>
+
+        <label for="holidayextranighthoursworked">Holiday Extra Night Hours Worked:</label>
+        <input type="number" id="holidayextranighthoursworked" name="holidayextranighthoursworked" required><br>
+
+        <label for="daysofdisability">Days of Disability:</label>
+        <input type="number" id="daysofdisability" name="daysofdisability" required><br>
+
+        <label for="leavedays">Leave Days:</label>
+        <input type="number" id="leavedays" name="leavedays" required><br>
+
+        <h2>Deductions Information</h2>
+        <label for="healthinsurancepercentage">Health Insurance Percentage:</label>
+        <input type="number" id="healthinsurancepercentage" name="healthinsurancepercentage" step="0.01" required><br>
+
+        <label for="pensioncontributionpercentage">Pension Contribution Percentage:</label>
+        <input type="number" id="pensioncontributionpercentage" name="pensioncontributionpercentage" step="0.01" required><br>
+
+        <label for="pensionsolidarityfundcontributionpercentage">Pension Solidarity Fund Contribution Percentage:</label>
+        <input type="number" id="pensionsolidarityfundcontributionpercentage" name="pensionsolidarityfundcontributionpercentage" step="0.01" required><br>
+
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>

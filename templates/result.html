@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Employee Details</title>
+</head>
+<body>
+    <h1>Employee Details</h1>
+    {% if employee_details %}
+        <p>First Name: {{ employee_details.employee.firstname }}</p>
+        <p>Surname: {{ employee_details.employee.surname }}</p>
+        <p>ID Number: {{ employee_details.employee.idnumber }}</p>
+        <p>Email: {{ employee_details.employee.mail }}</p>
+        <h2>Net Salary: {{ employee_details.net_salary }}</h2>
+    {% else %}
+        <p>{{ error_message }}</p>
+    {% endif %}
+</body>
+</html>
+
